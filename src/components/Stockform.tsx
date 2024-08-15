@@ -38,7 +38,7 @@ export const Stockform: React.FC<stockProps> = ({ symbols, setLoading }) => {
     return (
         <div className="stock-for">
             <div className="flex flex-col items-center gap-5">
-                <img className=" w-24 h-24 object-contain" src="../assets/logo.jpg" alt="" />
+                <img className=" w-24 h-24 object-contain" src="/logo.jpg" alt="" />
                 <h1 className="font-bold text-xl">Real-Time Stock Price Checker</h1>
                 <Autocomplete
                     disablePortal
