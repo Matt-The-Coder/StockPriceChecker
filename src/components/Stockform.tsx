@@ -1,13 +1,13 @@
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
-import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Resultbox } from './ResultBox';
+import { Resultbox } from './Resultbox';
 
 // PROPS
 interface stockProps {
     symbols: String[],
-    setLoading: Dispatch<SetStateAction<Boolean>>
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 
@@ -45,7 +45,7 @@ export const Stockform: React.FC<stockProps> = ({ symbols, setLoading }) => {
                     id="combo-box-demo"
                     options={symbols}
                     onChange={(e, newValue) => {
-                        newValue ? setInputSymbol(newValue.toString()) : null
+                        newValue ? setInputSymbol(newValue.toString()) : e
                     }}
                     sx={{ width: 300 }}
                     renderInput={(params) => <TextField {...params} label="Stock Symbol"
